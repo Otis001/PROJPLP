@@ -1,0 +1,29 @@
+
+<form id="update_user">
+    <input type="hidden" name="id" value="<%= user._id %>">
+    <div class="new_user">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" name="name" class="form-control" value="<%= user.name %>" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" class="form-control" value="<%= user.email %>" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="text" name="phone" class="form-control" value="<%= user.phone %>" required>
+        </div>
+        <div class="form-group">
+            <label for="meterNumber">Meter Number</label>
+            <input type="text" name="meterNumber" class="form-control" value="<%= user.meterNumber %>" required>
+        </div>
+        <div class="form-group">
+            <label for="location">Location</label>
+            <input type="text" name="location" class="form-control" value="<%= user.location %>" required>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn text-light btn-warning">Update</button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,21 @@
+
+<% users.forEach(function(user, index) { %>
+    <tr id="user-<%= user._id %>">
+        <td><%= index + 1 %></td>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.phone %></td>
+        <td><%= user.meterNumber %></td>
+        <td><%= user.location %></td>
+        <td>
+            <a href="/update-user?id=<%= user._id %>" class="btn border-shadow update">
+                <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+            </a>
+            <form class="delete-user-form d-inline" data-id="<%= user._id %>">
+                <button type="submit" class="btn border-shadow delete">
+                    <span class="text-gradient"><i class="fas fa-trash-alt"></i></span>
+                </button>
+            </form>
+        </td>
+    </tr>
+<% }) %>
